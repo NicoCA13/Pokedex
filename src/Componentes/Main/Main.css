@@ -6,7 +6,7 @@
   background-color: #e0e0e0;
 }
 .titulo-pokedex {
-  margin-top: 15px;
+  margin: 15px 0 0 15px;
 
   font-size: 3.5rem;
   text-align: start;
@@ -41,11 +41,8 @@
 
 .lista-pokemones {
   padding-top: 20px;
-  justify-items: center;
-  align-items: center;
-  background-color: #e0e0e0;
-  /* display: grid;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  gap: 25px; */
+  gap: 25px;
 }
