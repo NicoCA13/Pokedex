@@ -18,6 +18,15 @@ export default function Main() {
     );
     setListaDePokemones(listaActualizadaPorNombre);
   };
+
+  const buscarNombre = (nommbre) => {
+    const buscarPorLetras = [...listaDePokemones].filter((pokemones) =>
+      pokemones.nombre.match(/´${buscarNombre}´/gi)
+    );
+    console.log(buscarPorLetras);
+    return buscarPorLetras.match;
+  };
+
   return (
     <div className="padre-div">
       <div className="headerCard">
@@ -36,6 +45,7 @@ export default function Main() {
       </div>
       <div className="input">
         <input
+          onChange={buscarNombre}
           className="input-buscador"
           type="text"
           placeholder=" 🔎  Buscar"
