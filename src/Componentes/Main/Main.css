@@ -6,7 +6,6 @@
 body {
   margin: 0 50px;
   color: white;
-  background-color: black;
 }
 .headerCard {
   display: grid;
@@ -198,4 +197,56 @@ h3 {
   padding: 10px;
   border-radius: 0 0px 15px 15px;
   background-color: #b7b9d0;
+}
+
+* {
+  margin: 0%;
+  box-sizing: border-box;
+}
+.padre-div {
+  background-color: #e0e0e0;
+}
+.titulo-pokedex {
+  margin-top: 15px;
+
+  font-size: 3.5rem;
+  text-align: start;
+}
+.button-ordenar {
+  font-size: 2rem;
+  height: 80px;
+  width: 80px;
+  background-color: #e0e0e0;
+  border: none;
+}
+.headerCard {
+  padding-top: 60px;
+  color: #212121;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  align-items: center;
+}
+.pokeball {
+  margin: 15px 0 15px 90px;
+  width: 45%;
+}
+
+.input-buscador {
+  text-align: center;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  width: 90%;
+  height: 35px;
+}
+
+.lista-pokemones {
+  padding-top: 20px;
+  justify-items: center;
+  align-items: center;
+  background-color: #e0e0e0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 25px;
 }
