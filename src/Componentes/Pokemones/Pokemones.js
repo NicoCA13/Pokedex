@@ -1,19 +1,8 @@
-import "./Pokemones.css";
-// import React from "react";
-// import bulbasaur from "../../iconos/bulbasaur.png";
-// import charmander from "../../iconos/charmander.png";
-// import squirtle from "../../iconos/squirtle.png";
-// import butterfree from "../../iconos/butterfree.png";
-// import pikachu from "../../iconos/pikachu.png";
-// import gastly from "../../iconos/gastly.png";
-// import ditto from "../../iconos/ditto.png";
-// import mew from "../../iconos/mew.png";
-// import aron from "../../iconos/aron.png";
-
-const ListaDeDatos = [
+const Pokemones = [
   {
     nombre: "Bulbasaur",
     numero: 1,
+    color: "#74cb48",
     elemento: "Gras",
     elementoSecundario: "Poison",
     peso: 6.9,
@@ -25,6 +14,7 @@ const ListaDeDatos = [
   {
     nombre: "Charmander",
     numero: 4,
+    color: "#f57d31",
     elemento: "Fire",
     elementoSecundario: "",
     peso: 8.5,
@@ -36,6 +26,7 @@ const ListaDeDatos = [
   {
     nombre: "Squirtle",
     numero: 7,
+    color: "#6493eb",
     elemento: "Watter",
     elementoSecundario: "",
     peso: 9.0,
@@ -47,6 +38,7 @@ const ListaDeDatos = [
   {
     nombre: "Butterfree",
     numero: 12,
+    color: "#a7b723",
     elemento: "Bug",
     elementoSecundario: "Flying",
     peso: 32.0,
@@ -58,6 +50,7 @@ const ListaDeDatos = [
   {
     nombre: "Pikachu",
     numero: 25,
+    color: "#f9cf30",
     elemento: "Electric",
     elementoSecundario: "",
     peso: 6.0,
@@ -69,6 +62,7 @@ const ListaDeDatos = [
   {
     nombre: "Gastly",
     numero: 92,
+    color: "#70559b",
     elemento: "Ghost",
     elementoSecundario: "Type",
     peso: 0.1,
@@ -80,6 +74,7 @@ const ListaDeDatos = [
   {
     nombre: "Ditto",
     numero: 132,
+    color: "#aaa67f",
     elemento: "Normal",
     elementoSecundario: "",
     peso: 4.0,
@@ -91,6 +86,7 @@ const ListaDeDatos = [
   {
     nombre: "Mew",
     numero: 152,
+    color: "#fb5584",
     elemento: "Psychic",
     elementoSecundario: "",
     peso: 4.0,
@@ -102,6 +98,7 @@ const ListaDeDatos = [
   {
     nombre: "Aron",
     numero: 304,
+    color: "#b7b9d0",
     elemento: "Steel",
     elementoSecundario: "Rock",
     peso: 60,
@@ -111,3 +108,5 @@ const ListaDeDatos = [
     stats: { hp: 50, atk: 70, def: 100, satk: 40, sdef: 40, spd: 30 },
   },
 ];
+
+export default Pokemones;
