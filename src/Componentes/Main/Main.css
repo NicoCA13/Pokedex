@@ -2,6 +2,17 @@
   margin: 0%;
   box-sizing: border-box;
 }
+.colaboradores {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
 .padre-div {
   background-color: #e0e0e0;
 }
@@ -22,7 +33,7 @@
   padding-top: 60px;
   color: #212121;
   display: grid;
-  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-columns: 1fr 6fr 2fr 1fr;
   align-items: center;
 }
 .pokeball {
@@ -40,9 +51,36 @@
 }
 
 .lista-pokemones {
+  justify-items: center;
   padding-top: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   gap: 25px;
+}
+@keyframes example {
+  0% {
+    color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 50px;
+    top: 0px;
+  }
+  50% {
+    color: blue;
+    left: 50px;
+    top: 50px;
+  }
+  75% {
+    color: green;
+    left: 0px;
+    top: 50px;
+  }
+  100% {
+    color: red;
+    left: 0px;
+    top: 0px;
+  }
 }

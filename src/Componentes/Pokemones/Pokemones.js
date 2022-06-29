@@ -1,7 +1,7 @@
 const Pokemones = [
   {
     nombre: "Bulbasaur",
-    numero: 1,
+    numero: `001`,
     color: "#74cb48",
     elemento: "Gras",
     elementoSecundario: "Poison",
@@ -13,7 +13,7 @@ const Pokemones = [
   },
   {
     nombre: "Charmander",
-    numero: 4,
+    numero: `004`,
     color: "#f57d31",
     elemento: "Fire",
     elementoSecundario: "",
@@ -25,7 +25,7 @@ const Pokemones = [
   },
   {
     nombre: "Squirtle",
-    numero: 7,
+    numero: `007`,
     color: "#6493eb",
     elemento: "Watter",
     elementoSecundario: "",
@@ -37,7 +37,7 @@ const Pokemones = [
   },
   {
     nombre: "Butterfree",
-    numero: 12,
+    numero: `012`,
     color: "#a7b723",
     elemento: "Bug",
     elementoSecundario: "Flying",
@@ -49,7 +49,7 @@ const Pokemones = [
   },
   {
     nombre: "Pikachu",
-    numero: 25,
+    numero: `025`,
     color: "#f9cf30",
     elemento: "Electric",
     elementoSecundario: "",
@@ -61,7 +61,7 @@ const Pokemones = [
   },
   {
     nombre: "Gastly",
-    numero: 92,
+    numero: `092`,
     color: "#70559b",
     elemento: "Ghost",
     elementoSecundario: "Type",

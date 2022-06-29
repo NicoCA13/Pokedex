@@ -1,3 +1,148 @@
-.pep {
-  background-color: black;
+h3 {
+  font-size: 1.8rem;
+}
+
+.img-pokemones {
+  width: 80%;
+  align-self: center;
+}
+
+.bulbasaur {
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  border: solid 2px #74cb48;
+}
+.bulbasaur > span {
+  margin: 5px 15px 0 0;
+  text-align: end;
+  color: #74cb48;
+}
+.bulbasaur-name {
+  padding: 10px;
+  border-radius: 0 0px 15px 15px;
+  background-color: #74cb48;
+}
+.charmander {
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  border: solid 2px #f57d31;
+}
+.charmander > span {
+  margin: 5px 15px 0 0;
+  text-align: end;
+  color: #f57d31;
+}
+.charmander-name {
+  padding: 10px;
+  border-radius: 0 0px 15px 15px;
+  background-color: #f57d31;
+}
+.squirtle {
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  border: solid 2px #6493eb;
+}
+.squirtle > span {
+  margin: 5px 15px 0 0;
+  text-align: end;
+  color: #6493eb;
+}
+.squirtle-name {
+  padding: 10px;
+  border-radius: 0 0px 15px 15px;
+  background-color: #6493eb;
+}
+.butterfree {
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  border: solid 2px #a7b723;
+}
+.butterfree > span {
+  margin: 5px 15px 0 0;
+  text-align: end;
+  color: #a7b723;
+}
+.butterfree-name {
+  padding: 10px;
+  border-radius: 0 0px 15px 15px;
+  background-color: #a7b723;
+}
+.pikachu {
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  border: solid 2px #f9cf30;
+}
+.pikachu > span {
+  margin: 5px 15px 0 0;
+  text-align: end;
+  color: #f9cf30;
+}
+.pikachu-name {
+  padding: 10px;
+  border-radius: 0 0px 15px 15px;
+  background-color: #f9cf30;
+}
+.gastly {
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  border: solid 2px #70559b;
+}
+.gastly > span {
+  margin: 5px 15px 0 0;
+  text-align: end;
+  color: #70559b;
+}
+.gastly-name {
+  padding: 10px;
+  border-radius: 0 0px 15px 15px;
+  background-color: #70559bcd;
+}
+.ditto {
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  border: solid 2px #aaa67f;
+}
+.ditto > span {
+  margin: 5px 15px 0 0;
+  text-align: end;
+  color: #aaa67f;
+}
+.ditto-name {
+  padding: 10px;
+  border-radius: 0 0px 15px 15px;
+  background-color: #aaa67f;
+}
+.mew {
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  border: solid 2px #fb5584;
+}
+.mew > span {
+  margin: 5px 15px 0 0;
+  text-align: end;
+  color: #fb5584;
+}
+.mew-name {
+  padding: 10px;
+  border-radius: 0 0px 15px 15px;
+  background-color: #fb5584;
+}
+.aron {
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  border: solid 2px #b7b9d0;
+}
+.aron > span {
+  margin: 5px 15px 0 0;
+  text-align: end;
+  color: #b7b9d0;
 }
