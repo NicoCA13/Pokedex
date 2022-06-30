@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import pokeball from "../../iconos/Pokeball.png";
 import Pokemones from "../Pokemones/Pokemones";
 import CardPokemon from "../CardPokemon/CardPokemon";
+import PokeballRodante from "../../iconos/Poké_Ball_icon.svg.png";
 
 export default function Main() {
   const [listaDePokemones, setListaDePokemones] = useState(Pokemones);
@@ -37,6 +38,10 @@ export default function Main() {
         <h1 className="titulo-pokedex">Pokédex</h1>
         <div className="colaboradores">
           <h4> By: Pablito and Nico</h4>
+        </div>
+        <div className="pokeballDivId">
+          {" "}
+          <img className="pokeballDiv" src={PokeballRodante} alt="" />
         </div>
         <button
           onClick={

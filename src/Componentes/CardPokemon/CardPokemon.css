@@ -146,3 +146,10 @@ h3 {
   text-align: end;
   color: #b7b9d0;
 }
+.padrePokemones:hover {
+  box-shadow: 5px 19px 29px 6px rgba(23, 23, 23, 0.89);
+  -webkit-box-shadow: 5px 19px 29px 6px rgba(23, 23, 23, 0.89);
+  -moz-box-shadow: 5px 19px 29px 6px rgba(23, 23, 23, 0.89);
+  transition-duration: 0.5s;
+  transform: scale(1.2, 1.2);
+}
