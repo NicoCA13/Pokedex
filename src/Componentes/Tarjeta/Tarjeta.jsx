@@ -6,9 +6,12 @@ import imgTamaño from "../../iconos/Height.svg";
 import { useParams } from "react-router-dom";
 import pokeball from "../../iconos/Pokeball.png";
 import Pokemones from "../Pokemones/Pokemones";
-export default function Tarjeta({ pokemones }) {
+export default function Tarjeta({}) {
   const { nombre } = useParams();
-  const pokemon = pokemones.find((pokemon) => pokemon.nombre === nombre);
+  const indicePokemon = Pokemones.findIndex(
+    (pokemon) => pokemon.nombre.toLowerCase() === nombre.toLowerCase()
+  );
+  const pokemon = Pokemones[indicePokemon];
 
   const imgPokemon = require(`../../iconos/${pokemon.nombre.toLowerCase()}.png`);
   return (
@@ -16,11 +19,11 @@ export default function Tarjeta({ pokemones }) {
       <div className="contenedorTarjeta">
         <div className="tarjeta" style={{ backgroundColor: pokemon.color }}>
           <div className="superior">
-            <Link style={{ textDecoration: "none" }} to={`/`}>
+            <Link style={{ textDecoration: "none" }} to={"/"}>
               <div className="arrow"> ← </div>
             </Link>
             <h1 className="pokemonYSuNombre"> {pokemon.nombre}</h1>
-            <span className="pokemonYSuNumero">{pokemon.numero}</span>
+            <span className="pokemonYSuNumero">#{pokemon.numero}</span>
           </div>
           <div>
             <img
@@ -30,8 +33,26 @@ export default function Tarjeta({ pokemones }) {
               style={{ opacity: "10%" }}
             />
           </div>
+          <div>
+            {indicePokemon !== 0 && (
+              <Link
+                style={{ textDecoration: "none" }}
+                to={`/tarjeta/${Pokemones[indicePokemon - 1].nombre}`}
+              >
+                <button className="botonesDeMover">←</button>
+              </Link>
+            )}
 
-          <img className="pokemonImagen" src={imgPokemon} alt={imgPokemon} />
+            <img className="pokemonImagen" src={imgPokemon} alt={imgPokemon} />
+            {indicePokemon !== Pokemones.length - 1 && (
+              <Link
+                style={{ textDecoration: "none" }}
+                to={`/tarjeta/${Pokemones[indicePokemon + 1].nombre}`}
+              >
+                <button className="botonesDeMover">→</button>
+              </Link>
+            )}
+          </div>
 
           <div className="contenedorDatos">
             <div className="contenedorElementos">

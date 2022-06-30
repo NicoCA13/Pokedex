@@ -17,7 +17,7 @@
   height: 100vh;
   padding: 15px;
   border-radius: 15px;
-  background-color: #74cb48;
+  z-index: 0;
 }
 
 .superior {
@@ -37,26 +37,23 @@
   font-size: 3.5rem;
 }
 .pokeballFondo {
-  z-index: 0;
+  z-index: -1;
   right: 20px;
   top: 10px;
   position: absolute;
-  width: 55%;
+  width: 50%;
 }
 
 .pokemonImagen {
-  z-index: 1;
   width: 350px;
-  top: 20%;
-  right: 25%;
-  position: absolute;
 }
 
 .contenedorDatos {
+  z-index: -1;
   border-radius: 15px;
-  height: 52%;
+  height: 56%;
   width: 96.5%;
-  top: 47%;
+  top: 42%;
   position: absolute;
   background-color: rgb(238, 241, 241);
 }
@@ -83,7 +80,7 @@
 .contenedorElementos {
   display: flex;
   justify-content: center;
-  margin-top: 75px;
+  padding-top: 40px;
 }
 
 .about {
@@ -201,18 +198,28 @@ h5 {
   list-style: none;
 }
 .listaNumeros {
-  padding: 10px 10px 0px 20px;
-  margin: 2px;
+  padding: 10px;
   font-size: 1rem;
   text-align: start;
   list-style: none;
 }
 li {
   font-size: 0.7rem;
-  padding: 3px;
+  padding: 6px;
 }
 
 .datosDePokemon {
   margin-top: 5px;
   display: flex;
+}
+.botonesDeMover {
+  cursor: grab;
+  font-size: 2rem;
+  border: unset;
+  border-radius: 25px;
+  background-color: unset;
+}
+.botonesDeMover:hover {
+  transition-duration: 0.5s;
+  transform: scale(1.5, 1.5);
 }
