@@ -91,7 +91,7 @@ h3 {
   display: flex;
   flex-direction: column;
   border-radius: 18px;
-  border: solid 2px #70559b;
+  border: solid 2px #4f0abd;
 }
 .gastly > span {
   margin: 5px 15px 0 0;
@@ -146,10 +146,26 @@ h3 {
   text-align: end;
   color: #b7b9d0;
 }
+.numeroPokemon {
+  left: 3px;
+  top: 220px;
+  position: absolute;
+  display: inline-block;
+  text-align: end;
+  margin: 10px 10px;
+}
+.elementosPokemones {
+  text-align: center;
+  display: inline-block;
+  margin: 10px 10px;
+}
+.padrePokemones {
+  position: relative;
+}
 .padrePokemones:hover {
   box-shadow: 5px 19px 29px 6px rgba(23, 23, 23, 0.89);
   -webkit-box-shadow: 5px 19px 29px 6px rgba(23, 23, 23, 0.89);
   -moz-box-shadow: 5px 19px 29px 6px rgba(23, 23, 23, 0.89);
-  transition-duration: 0.5s;
+  transition-duration: 0.2s;
   transform: scale(1.2, 1.2);
 }

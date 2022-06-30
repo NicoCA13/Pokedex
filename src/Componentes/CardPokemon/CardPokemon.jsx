@@ -1,33 +1,46 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./CardPokemon.css";
 
 export default function CardPokemon({ pokemon }) {
   const imgPokemon = require(`../../iconos/${pokemon.nombre.toLowerCase()}.png`);
   return (
-    <div
-      className="padrePokemones"
-      style={{
-        fontWeight: "900",
-        width: "300px",
-        border: "solid 4px",
-        borderColor: pokemon.color,
-        borderRadius: "25px",
-      }}
-      key={pokemon.numero.toString()}
-    >
-      <span style={{ color: pokemon.color }}>#{pokemon.numero}</span>{" "}
-      <img src={imgPokemon} alt={imgPokemon} />
+    <Link style={{ textDecoration: "none" }} to={`tarjeta/${pokemon.nombre}`}>
       <div
-        className="cardBorder"
+        className="padrePokemones"
         style={{
-          backgroundColor: pokemon.color,
-          borderRadius: " 0 0 15px 15px",
-          color: "white",
-          fontSize: "25px",
+          fontWeight: "900",
+          width: "300px",
+          border: "solid 4px",
+          borderColor: pokemon.color,
+          borderRadius: "25px",
         }}
+        key={pokemon.numero.toString()}
       >
-        {pokemon.nombre}
+        <div className="elementosPokemones">
+          {pokemon.elemento.map((el) => (
+            <div className={`elemento1 ${el.toLowerCase()}`}>
+              <h4>{el}</h4>
+            </div>
+          ))}
+        </div>
+        <img src={imgPokemon} alt={imgPokemon} />
+        <div className="numeroPokemon" style={{ color: pokemon.color }}>
+          #{pokemon.numero}
+        </div>{" "}
+        <div
+          className="cardBorder"
+          style={{
+            backgroundColor: pokemon.color,
+            borderRadius: " 0 0 15px 15px",
+            color: "white",
+            fontSize: "25px",
+            padding: "10px",
+          }}
+        >
+          {pokemon.nombre}
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }

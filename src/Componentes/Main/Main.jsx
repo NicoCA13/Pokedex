@@ -4,6 +4,7 @@ import pokeball from "../../iconos/Pokeball.png";
 import Pokemones from "../Pokemones/Pokemones";
 import CardPokemon from "../CardPokemon/CardPokemon";
 import PokeballRodante from "../../iconos/Poké_Ball_icon.svg.png";
+import { Link } from "react-router-dom";
 
 export default function Main() {
   const [listaDePokemones, setListaDePokemones] = useState(Pokemones);
@@ -49,9 +50,9 @@ export default function Main() {
               ? ordenarPorNumero
               : ordenarPorNombre
           }
-          className="button-ordenar"
+          id="button-ordenar"
         >
-          {listaDePokemones[0].numero === "001" ? "⬇🔢" : "⬇🔠"}
+          {listaDePokemones[0].numero !== "001" ? "⬇🔢" : "⬇🔠"}
         </button>
       </div>
       <div className="input">
