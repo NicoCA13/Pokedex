@@ -60,7 +60,7 @@ export default function Main() {
           onChange={buscarNombre}
           className="input-buscador"
           type="text"
-          placeholder=" 🔎  Buscar"
+          placeholder=" 🔎  Search Pokémon.."
         />
       </div>
       <div className="lista-pokemones">

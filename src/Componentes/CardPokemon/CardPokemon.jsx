@@ -24,7 +24,7 @@ export default function CardPokemon({ pokemon }) {
             </div>
           ))}
         </div>
-        <img src={imgPokemon} alt={imgPokemon} />
+        <img className="imagenPokemon" src={imgPokemon} alt={imgPokemon} />
         <div className="numeroPokemon" style={{ color: pokemon.color }}>
           #{pokemon.numero}
         </div>{" "}

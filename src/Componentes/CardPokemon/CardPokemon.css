@@ -7,8 +7,9 @@
   margin: 10px 10px;
 }
 .elementosPokemones {
-  text-align: center;
-  display: inline-block;
+  font-size: 0.8rem;
+  justify-content: center;
+  display: flex;
   margin: 10px 10px;
 }
 .padrePokemones {
@@ -20,4 +21,8 @@
   -moz-box-shadow: 5px 19px 29px 6px rgba(23, 23, 23, 0.89);
   transition-duration: 0.2s;
   transform: scale(1.2, 1.2);
+}
+.imagenPokemon {
+  width: 200px;
+  width: 200px;
 }

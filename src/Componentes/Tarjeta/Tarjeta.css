@@ -163,6 +163,22 @@ h6 {
 .rock {
   background-color: #b69e31;
 }
+.dark {
+  background-color: #75574c;
+}
+.ground {
+  background-color: #dec16b;
+}
+.fighting {
+  background-color: #c12239;
+}
+.sinister {
+  background-color: #707070;
+}
+.ice {
+  background-color: #9ad6df;
+}
+
 .imgPeso,
 .imgTamaño {
   width: 25px;
