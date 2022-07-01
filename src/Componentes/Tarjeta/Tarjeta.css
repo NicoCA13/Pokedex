@@ -1,27 +1,28 @@
 .body {
+  height: 100vh;
   text-align: center;
   background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/80ff523f-ff84-457d-a547-464588d3a3d3/df4qvkb-f3a7a3ee-a776-47f5-b7fd-d637c1484b33.jpg/v1/fill/w_983,h_813,q_70,strp/river_background_2_by_willdinomaster55_df4qvkb-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTIwMCIsInBhdGgiOiJcL2ZcLzgwZmY1MjNmLWZmODQtNDU3ZC1hNTQ3LTQ2NDU4OGQzYTNkM1wvZGY0cXZrYi1mM2E3YTNlZS1hNzc2LTQ3ZjUtYjdmZC1kNjM3YzE0ODRiMzMuanBnIiwid2lkdGgiOiI8PTE0NTAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.4A1NV1JhE1EtKAuKIzftW-EkHT2-0chlLmx9kZKMa3I");
   background-size: contain;
 }
 
 .contenedorTarjeta {
+  padding-top: 15px;
   margin: 0 30%;
 }
 .pokemonYSuNombre,
 .pokemonYSuNumero {
   display: inline-block;
-  z-index: 1;
 }
 
 .tarjeta {
   position: relative;
-  height: 100vh;
-  padding: 15px;
+  padding: 10px;
   border-radius: 15px;
-  z-index: 0;
 }
 
 .superior {
+  position: relative;
+  z-index: 1;
   margin: 0 50px;
   align-items: center;
   display: grid;
@@ -38,29 +39,45 @@
   font-size: 3.5rem;
 }
 .pokeballFondo {
-  z-index: -1;
-  right: 20px;
-  top: 10px;
+  z-index: 0;
+  bottom: -300px;
   position: absolute;
   width: 50%;
 }
-
+.flechas {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 .pokemonImagen {
+  animation: bounce 1s ease-in-out infinite;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+  position: relative;
   width: 350px;
+  z-index: 2;
+}
+.next {
+  margin-left: auto;
 }
 
 .contenedorDatos {
-  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+  margin-top: -100px;
+  padding: 20px;
   border-radius: 15px;
-  height: 56%;
-  width: 96.5%;
-  top: 42%;
-  position: absolute;
   background-color: rgb(238, 241, 241);
+}
+.contendorDatosPokemon > div {
+  flex: 1;
 }
 
 .elemento1 {
-  margin-right: 30px;
   padding: 10px;
   display: inline-block;
   height: 35px;
@@ -70,7 +87,6 @@
 }
 
 .elemento2 {
-  padding: 10px;
   display: inline-block;
   height: 35px;
   border-radius: 15px;
@@ -80,8 +96,9 @@
 
 .contenedorElementos {
   display: flex;
+  column-gap: 20px;
+
   justify-content: center;
-  padding-top: 40px;
 }
 
 .about {
@@ -89,24 +106,21 @@
   font-weight: bolder;
   color: #74cb48;
   text-align: center;
-  margin-top: 10px;
 }
 
 .contendorDatosPokemon {
-  margin-top: 25px;
-
-  align-items: center;
+  align-items: stretch;
   justify-content: space-around;
   display: flex;
 }
 
 .c {
-  margin-top: 15px;
-
+  justify-content: center;
   display: flex;
 }
 
 .p {
+  justify-content: center;
   border-right: 1px solid rgb(121, 117, 117);
 }
 
@@ -117,10 +131,8 @@
 }
 
 h6 {
-  margin-top: 10px;
   text-align: center;
   color: gray;
-  margin-bottom: 15px;
 }
 
 .fire {
@@ -146,7 +158,7 @@ h6 {
   background-color: #f9cf30;
 }
 .ghost {
-  background-color: #70559bcd;
+  background-color: #70559b;
 }
 .type {
   background-color: #666666;
@@ -187,15 +199,19 @@ h6 {
 }
 
 .movimientos {
+  text-transform: capitalize;
   text-align: center;
 }
 
 h5 {
   margin: 10px;
 }
-
-.descripcionPokemon {
-  margin: 35px 15px 0 15px;
+.pepe {
+  filter: invert(100%);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 0;
 }
 
 .baseStats {
@@ -205,9 +221,12 @@ h5 {
   margin-top: 10px;
   text-align: center;
 }
+.basestatss {
+  margin-bottom: 20px;
+}
 
 .listaLetras {
-  padding: 10px 10px 0px 20px;
+  padding: 0;
   border-right: solid 1px rgb(153, 146, 146);
   margin: 2px;
   font-size: 1rem;
@@ -215,7 +234,7 @@ h5 {
   list-style: none;
 }
 .listaNumeros {
-  padding: 10px;
+  padding: 0;
   font-size: 1rem;
   text-align: start;
   list-style: none;
@@ -244,17 +263,36 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 70vh;
+  width: 100%;
   align-items: flex-start;
-  gap: 17px;
+  gap: 15px;
 }
 .barra1 {
-  width: 76%;
-  background-color: rgb(109, 107, 107);
-  height: 6px;
+  display: flex;
+  width: 100%;
+
   border-radius: 15px;
+}
+.barra1,
+.barra2,
+.barra3 {
+  height: 8px;
 }
 .barra2 {
   border-radius: 15px 0px 0px 15px;
-  height: 6px;
+}
+.barra3 {
+  border-radius: 0px 15px 15px 0px;
+
+  flex: 1;
+}
+
+@keyframes bounce {
+  from {
+    top: 25%;
+    transform: scaleX(90.5%) scaleY(90%);
+  }
+  to {
+    top: 55%;
+  }
 }

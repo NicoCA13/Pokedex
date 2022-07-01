@@ -4,8 +4,7 @@ import pokeball from "../../iconos/Pokeball.png";
 import Pokemones from "../Pokemones/Pokemones";
 import CardPokemon from "../CardPokemon/CardPokemon";
 import PokeballRodante from "../../iconos/Poké_Ball_icon.svg.png";
-import { Link } from "react-router-dom";
-
+import Ash from "../../iconos/ash.png";
 export default function Main() {
   const [listaDePokemones, setListaDePokemones] = useState(Pokemones);
   const ordenarPorNumero = () => {
@@ -46,13 +45,13 @@ export default function Main() {
         </div>
         <button
           onClick={
-            listaDePokemones[0].numero !== "001"
+            listaDePokemones[0]?.numero !== "001"
               ? ordenarPorNumero
               : ordenarPorNombre
           }
           id="button-ordenar"
         >
-          {listaDePokemones[0].numero !== "001" ? "⬇🔢" : "⬇🔠"}
+          {listaDePokemones[0]?.numero !== "001" ? "⬇🔢" : "⬇🔠"}
         </button>
       </div>
       <div className="input">
@@ -63,6 +62,13 @@ export default function Main() {
           placeholder=" 🔎  Search Pokémon.."
         />
       </div>
+      {listaDePokemones == false ? (
+        <div className="pokemonNoEncontrado">
+          <img className="ash" src={Ash} alt={Ash} />
+          <h1>Pokémon no encontrado :C.....</h1>{" "}
+        </div>
+      ) : null}
+
       <div className="lista-pokemones">
         {listaDePokemones.map((pokemon) => {
           return <CardPokemon pokemon={pokemon} key={pokemon.nombre} />;

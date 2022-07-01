@@ -19,7 +19,7 @@ export default function CardPokemon({ pokemon }) {
       >
         <div className="elementosPokemones">
           {pokemon.elemento.map((el) => (
-            <div className={`elemento1 ${el.toLowerCase()}`}>
+            <div key={el} className={`elemento1 ${el.toLowerCase()}`}>
               <h4>{el}</h4>
             </div>
           ))}

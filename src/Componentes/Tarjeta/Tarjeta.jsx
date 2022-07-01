@@ -27,38 +27,43 @@ export default function Tarjeta({}) {
           </div>
           <div>
             <img
-              className="pokeballFondo"
+              className="pokeballFondo pepe"
               src={pokeball}
-              alt={pokeball}
-              style={{ opacity: "10%" }}
+              style={{ opacity: "40%" }}
             />
-          </div>
-          <div>
-            {indicePokemon !== 0 && (
-              <Link
-                style={{ textDecoration: "none" }}
-                to={`/tarjeta/${Pokemones[indicePokemon - 1].nombre}`}
-              >
-                <button className="botonesDeMover">←</button>
-              </Link>
-            )}
 
             <img className="pokemonImagen" src={imgPokemon} alt={imgPokemon} />
-            {indicePokemon !== Pokemones.length - 1 && (
-              <Link
-                style={{ textDecoration: "none" }}
-                to={`/tarjeta/${Pokemones[indicePokemon + 1].nombre}`}
-              >
-                <button className="botonesDeMover">→</button>
-              </Link>
-            )}
           </div>
 
           <div className="contenedorDatos">
+            <div className="flechas">
+              {indicePokemon !== 0 && (
+                <Link
+                  style={{ textDecoration: "none" }}
+                  to={`/tarjeta/${Pokemones[indicePokemon - 1].nombre}`}
+                >
+                  <button className="botonesDeMover">←</button>
+                </Link>
+              )}
+              {indicePokemon !== Pokemones.length - 1 && (
+                <Link
+                  className="next"
+                  style={{ textDecoration: "none" }}
+                  to={`/tarjeta/${Pokemones[indicePokemon + 1].nombre}`}
+                >
+                  <button
+                    className="botonesDeMover
+                  "
+                  >
+                    →
+                  </button>
+                </Link>
+              )}
+            </div>
             <div className="contenedorElementos">
               {pokemon.elemento.map((el) => (
                 <div className={`elemento1 ${el.toLowerCase()}`}>
-                  <h4>{el}</h4>
+                  <h4 className="elementosh4">{el}</h4>
                 </div>
               ))}
             </div>
@@ -92,85 +97,45 @@ export default function Tarjeta({}) {
               <p>{pokemon.descripcion}</p>
             </div>
             <div className="baseStats">
-              <h3 style={{ color: pokemon.color }}>Base Stats</h3>
+              <h3 className="basestatss" style={{ color: pokemon.color }}>
+                Base Stats
+              </h3>
               <div className="datosDePokemon" style={{ color: pokemon.color }}>
                 <ul className="listaLetras">
-                  <li>HP</li>
-                  <li>ATK</li>
-                  <li>DEF</li>
-                  <li>SATK</li>
-                  <li>SDEF</li>
-                  <li>SPD</li>
+                  {Object.entries(pokemon.stats).map(
+                    ([nombreDeLaProp, valorDeLaProp]) => (
+                      <li>{nombreDeLaProp.toUpperCase()}</li>
+                    )
+                  )}
                 </ul>
                 <ul className="listaNumeros" style={{ color: "black" }}>
-                  <li>{pokemon.stats.hp} </li>
-                  <li>{pokemon.stats.atk}</li>
-                  <li>{pokemon.stats.def}</li>
-                  <li>{pokemon.stats.satk}</li>
-                  <li>{pokemon.stats.sdef}</li>
-                  <li>{pokemon.stats.spd}</li>
+                  {Object.entries(pokemon.stats).map(
+                    ([nombreDeLaProp, valorDeLaProp]) => (
+                      <li>{valorDeLaProp}</li>
+                    )
+                  )}
                 </ul>
                 <div className="barras">
-                  <div className="barra1">
-                    {" "}
-                    <div
-                      className="barra2"
-                      style={{
-                        backgroundColor: pokemon.color,
-                        width: `${pokemon.stats.hp / 2}%`,
-                      }}
-                    ></div>
-                  </div>
-                  <div className="barra1">
-                    {" "}
-                    <div
-                      className="barra2"
-                      style={{
-                        backgroundColor: pokemon.color,
-                        width: `${pokemon.stats.atk / 2}%`,
-                      }}
-                    ></div>
-                  </div>
-                  <div className="barra1">
-                    {" "}
-                    <div
-                      className="barra2"
-                      style={{
-                        backgroundColor: pokemon.color,
-                        width: `${pokemon.stats.def / 2}%`,
-                      }}
-                    ></div>
-                  </div>
-                  <div className="barra1">
-                    {" "}
-                    <div
-                      className="barra2"
-                      style={{
-                        backgroundColor: pokemon.color,
-                        width: `${pokemon.stats.satk / 2}%`,
-                      }}
-                    ></div>
-                  </div>
-                  <div className="barra1">
-                    {" "}
-                    <div
-                      className="barra2"
-                      style={{
-                        backgroundColor: pokemon.color,
-                        width: `${pokemon.stats.sdef / 2}%`,
-                      }}
-                    ></div>
-                  </div>
-                  <div className="barra1">
-                    {" "}
-                    <div
-                      className="barra2"
-                      style={{
-                        backgroundColor: pokemon.color,
-                        width: `${pokemon.stats.spd / 2}%`,
-                      }}
-                    ></div>
-                  </div>
+                  {Object.entries(pokemon.stats).map(
+                    ([nombreDeLaProp, valorDeLaProp]) => (
+                      <div className="barra1">
+                        <div
+                          className="barra2"
+                          style={{
+                            backgroundColor: pokemon.color,
+                            width: `${valorDeLaProp / 2}%`,
+                          }}
+                        ></div>
+                        <div
+                          className="barra3"
+                          style={{
+                            backgroundColor: pokemon.color,
+                            opacity: "30%",
+                          }}
+                        ></div>
+                      </div>
+                    )
+                  )}
                 </div>
               </div>
             </div>
