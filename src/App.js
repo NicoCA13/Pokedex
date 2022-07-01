@@ -1,4 +1,3 @@
-import "./App.css";
 import Main from "./Componentes/Main/Main.jsx";
 import Tarjeta from "./Componentes/Tarjeta/Tarjeta.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";

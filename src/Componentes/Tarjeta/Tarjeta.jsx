@@ -103,13 +103,75 @@ export default function Tarjeta({}) {
                   <li>SPD</li>
                 </ul>
                 <ul className="listaNumeros" style={{ color: "black" }}>
-                  <li>{pokemon.stats.hp}</li>
+                  <li>{pokemon.stats.hp} </li>
                   <li>{pokemon.stats.atk}</li>
                   <li>{pokemon.stats.def}</li>
                   <li>{pokemon.stats.satk}</li>
                   <li>{pokemon.stats.sdef}</li>
                   <li>{pokemon.stats.spd}</li>
                 </ul>
+                <div className="barras">
+                  <div className="barra1">
+                    {" "}
+                    <div
+                      className="barra2"
+                      style={{
+                        backgroundColor: pokemon.color,
+                        width: `${pokemon.stats.hp / 2}%`,
+                      }}
+                    ></div>
+                  </div>
+                  <div className="barra1">
+                    {" "}
+                    <div
+                      className="barra2"
+                      style={{
+                        backgroundColor: pokemon.color,
+                        width: `${pokemon.stats.atk / 2}%`,
+                      }}
+                    ></div>
+                  </div>
+                  <div className="barra1">
+                    {" "}
+                    <div
+                      className="barra2"
+                      style={{
+                        backgroundColor: pokemon.color,
+                        width: `${pokemon.stats.def / 2}%`,
+                      }}
+                    ></div>
+                  </div>
+                  <div className="barra1">
+                    {" "}
+                    <div
+                      className="barra2"
+                      style={{
+                        backgroundColor: pokemon.color,
+                        width: `${pokemon.stats.satk / 2}%`,
+                      }}
+                    ></div>
+                  </div>
+                  <div className="barra1">
+                    {" "}
+                    <div
+                      className="barra2"
+                      style={{
+                        backgroundColor: pokemon.color,
+                        width: `${pokemon.stats.sdef / 2}%`,
+                      }}
+                    ></div>
+                  </div>
+                  <div className="barra1">
+                    {" "}
+                    <div
+                      className="barra2"
+                      style={{
+                        backgroundColor: pokemon.color,
+                        width: `${pokemon.stats.spd / 2}%`,
+                      }}
+                    ></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
