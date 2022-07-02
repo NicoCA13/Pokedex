@@ -34,7 +34,9 @@ export default function Main() {
   return (
     <div className="padre-div">
       <div className="headerCard">
-        <img className="pokeball" src={pokeball} alt="logo_pokemon" />
+        <div>
+          <img className="pokeball" src={pokeball} alt="logo_pokemon" />
+        </div>
         <h1 className="titulo-pokedex">Pokédex</h1>
         <div className="colaboradores">
           <h4> By: Pablito and Nico</h4>
