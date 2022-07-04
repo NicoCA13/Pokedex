@@ -144,3 +144,37 @@
     top: 0px;
   }
 }
+@media (max-width: 390px) {
+  .titulo-pokedex {
+    font-size: 3.2rem;
+    margin: 15px 0 15px 0;
+  }
+
+  .pokemonYSuNombre {
+    font-size: 1.1rem;
+  }
+
+  .headerCard {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+  .pokeballDiv {
+    display: none;
+  }
+
+  .lista-pokemones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contendorDatosPokemon {
+    width: 100%;
+    font-size: 0.75rem;
+  }
+  .colaboradores:hover {
+    padding: 10px;
+    color: white;
+    box-shadow: inset 350px 0 0 0 #050a0c;
+  }
+}
